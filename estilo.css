@@ -1,0 +1,155 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login_container {
+  background: #ebebeb;
+  padding: 60px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 5px;
+}
+
+.login input[type="nombre"]{
+	
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 2px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="nombre"],
+.login input[type="email"],
+.login input[type="password"],
+.login input[type="rpassword"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="nombre"]:focus,
+.login input[type="email"]:focus,
+.login input[type="password"]:focus,
+.login input[type="rpassword"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+/* Estilo por defecto */
+ 
+.login input:required:invalid {
+background: #F5FFFA; 
+border: 1px solid red;
+ 
+}
+ 
+.login input:required:valid {
+ background: #F5FFFA;
+border: 1px solid green;
+ 
+}
+
+.bienvenido {
+  width: 1000px;
+  margin: 100px auto;
+  font-size: 16px;
+}
+
+.header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container {
+  background: #ebebeb;
+  padding: 60px;
+  width: 600px;
+}
+
+.container h1 {
+  padding: 10px;
+  width: 400px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 64px/1 "amaranth", Helvetica, sans-serif;
+  color: #2f777f;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #ebebeb;
+  text-shadow: -3px 3px 3px rgba(0,0,0,0.5) ;
+  -webkit-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: font-size 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -webkit-transform: rotateX(11deg)   ;
+  transform: rotateX(11deg)   ;
+}

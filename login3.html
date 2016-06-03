@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css"> 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./../js/jquery-1.10.2.min.js" ></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="validar.js" ></script>   
+
+    <script> 
+    function validar_clave(){ 
+    clave1 = document.login_container.contraseña.value 
+    clave2 = document.login_container.rcontraseña.value 
+
+    if (clave1 == clave2) 
+        alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo") 
+    else 
+        alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo") 
+        } 
+    </script>
+
+    <title>Login Formulario</title>
+  </head>
+
+  <body>
+<div ng-app="formApp">
+
+    <div class="login">
+    <div class="login-triangle"></div>  
+    <h2 class="login-header">Login</h2>
+
+  <div ng-controller="Main">
+      <form class="login_container"  method="post"  action="index.html">
+        <div class="input-group ">
+          <span class="input-group-addon"> <i class="fa fa-user fa-fw" aria-hidden="true" ></i></span>
+          <input  class="form-control"  name="nombre"  id="nombre" class="nombre" placeholder="Pon tu nombre"  type="text"  ng-model="formData.nombre" required autofocus=""/ >
+
+          <div id="mensaje1" class="errores">  </div>
+        </div>  <br>      
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"> <i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+          <input class="form-control" name="email" type="email"  id="email" class="email" placeholder="Pon tu mail" ng-model="formData.email" required/>
+          <div id="mensaje2" class="errores"> </div>
+        </div> <br>
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+        <input class="form-control" type="password"  name="contraseña" id="contraseña" class="contraseña" ng-model="formData.contraseña" placeholder="Contraseña" required/>
+      </div><br>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+        <input class="form-control" type="password" id="rcontraseña" class="rcontraseña" placeholder="Repetir contraseña" required/>
+      </div><br>
+       <p id="boton"><input  name="submit" type="submit" id="boton" class="boton" value="Registrar" ng-click="submitForm(formData)" ng-disabled="!login_container.$valid"></p> 
+         </div>
+      </form>
+      </div>
+
+ 
+
+    
+    
+    
+    
+  </body>
+</html>
